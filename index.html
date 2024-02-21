@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document 22</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Arrow fade out no scroll</h1>
+        <p class="sub-headings">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil ipsam similique est recusandae distinctio 
+            atque libero aut maiores. Consequatur ad at officia 
+            ipsa omnis quod adipisci ratione, laudantium excepturi odio!
+        </p>
+        <div class="circle">
+            <div class="arrow" id="arrow"></div>
+        </div>
+    </div>    
+    <script>
+        let circle = document.querySelector(".circle");
+        let arrow = document.querySelector("#arrow");
+
+        window.addEventListener('scroll',function(){
+           let position = window.scrollY;
+        //    console.log(position);
+        if(position < 5){
+            circle.classList.toggle("circle");
+            arrow.classList.toggle("arrow");
+        }
+
+        })
+    </script>
+</body>
+</html>
